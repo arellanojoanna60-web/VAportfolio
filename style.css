@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f9fa;
+    color: #222;
+    transition: 0.3s;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 20px 60px;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 140px 60px 80px;
+    min-height: 100vh;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+}
+
+.typing {
+    color: #2f3e2f;
+    font-weight: 700;
+}
+
+.hero-image img {
+    width: 380px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.section {
+    padding: 100px 60px;
+    text-align: center;
+}
+
+.dark-section {
+    background: #111;
+    color: white;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    padding: 15px;
+    color: white;
+    transform: translateY(100%);
+    transition: 0.4s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-item:hover .overlay {
+    transform: translateY(0);
+}
+
+.testimonial-container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.testimonial {
+    display: none;
+    font-size: 1.2rem;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.primary {
+    background: #2f3e2f;
+    color: white;
+}
